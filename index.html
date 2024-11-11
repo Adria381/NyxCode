@@ -3,10 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=NyxCode.html">
-    <title>Redirección</title>
+    <meta http-equiv="refresh" content="3;url=NyxCode.html">
+    <title>Redirigiendo...</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #2e2e2e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            color: #ff5733;
+        }
+
+        .progress-container {
+            width: 80%;
+            background-color: #555;
+            height: 30px;
+            border: 2px solid #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .progress-bar {
+            background-color: #ff5733;
+            height: 100%;
+            width: 0;
+            text-align: center;
+            line-height: 30px;
+            font-size: 1rem;
+            color: #fff;
+            font-weight: bold;
+            animation: fillProgress 3s forwards;
+        }
+
+        @keyframes fillProgress {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            font-size: 1rem;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirigiendo...</p>
+    <h1>Redirigiendo a NyxCode...</h1>
+    <div class="progress-container">
+        <div class="progress-bar">Cargando...</div>
+    </div>
+    <div class="footer">Si no eres redirigido, <a href="NyxCode.html" style="color: #ff5733;">haz clic aquí</a></div>
 </body>
 </html>
