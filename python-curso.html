@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Python - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="NyxCode.html">
+                        <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - Python</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
+                        <a href="#ejercicios" class="text-gray-600 hover:text-gray-900">Ejercicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a Python</a>
+                        </li>
+                        <li>
+                            <a href="#variables" class="text-gray-600 hover:text-gray-800">2. Variables y Tipos de Datos</a>
+                        </li>
+                        <li>
+                            <a href="#control" class="text-gray-600 hover:text-gray-800">3. Estructuras de Control</a>
+                        </li>
+                        <li>
+                            <a href="#funciones" class="text-gray-600 hover:text-gray-800">4. Funciones</a>
+                        </li>
+                        <li>
+                            <a href="#listas" class="text-gray-600 hover:text-gray-800">5. Listas y Tuplas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a Python</h1>
+                        
+                        <div class="prose max-w-none">
+                            <p class="mb-4">Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Es conocido por su sintaxis clara y legible, lo que lo hace perfecto para principiantes.</p>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Tu Primer Programa</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    print("¡Hola, mundo!")
+                                </code>
+                            </div>
+                            <div class="output-block">
+                                Salida: ¡Hola, mundo!
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.2 El Intérprete de Python</h2>
+                            <p>Python es un lenguaje interpretado, lo que significa que puedes escribir y ejecutar código línea por línea.</p>
+                            
+                            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100 my-6">
+                                <h3 class="text-lg font-semibold mb-2">Tip</h3>
+                                <p>Puedes usar IDLE, PyCharm o VSCode para escribir y ejecutar código Python.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Variables y Tipos de Datos -->
+                    <section id="variables" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Variables y Tipos de Datos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">2.1 Variables</h2>
+                            <p>Las variables son contenedores para almacenar datos.</p>
+                            
+                            <div class="code-block">
+                                <code class="text-white">
+                                    nombre = "Ana"<br>
+                                    edad = 25<br>
+                                    altura = 1.65<br>
+                                    es_estudiante = True<br>
+                                    <br>
+                                    print(f"Me llamo {nombre} y tengo {edad} años")
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">2.2 Tipos de Datos Básicos</h2>
+                            <ul class="list-disc pl-6 mb-6">
+                                <li>str (cadenas de texto)</li>
+                                <li>int (números enteros)</li>
+                                <li>float (números decimales)</li>
+                                <li>bool (valores booleanos)</li>
+                            </ul>
+
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100 my-6">
+                                <h3 class="text-lg font-semibold mb-2">Ejercicio Práctico</h3>
+                                <p>Crea variables para almacenar tu información personal y muéstralas usando print().</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Estructuras de Control -->
+                    <section id="control" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">3. Estructuras de Control</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">3.1 Condicionales if-else</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    edad = 18<br>
+                                    if edad >= 18:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print("Eres mayor de edad")<br>
+                                    else:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print("Eres menor de edad")
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">3.2 Bucles</h2>
+                            <h3 class="text-xl font-semibold mt-4 mb-2">Bucle for</h3>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    for i in range(5):<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Número: {i}")
+                                </code>
+                            </div>
+
+                            <h3 class="text-xl font-semibold mt-4 mb-2">Bucle while</h3>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    contador = 0<br>
+                                    while contador < 5:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Contador: {contador}")<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;contador += 1
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 4: Funciones -->
+                    <section id="funciones" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">4. Funciones</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">4.1 Definición de Funciones</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    def saludar(nombre):<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return f"¡Hola, {nombre}!"<br>
+                                    <br>
+                                    mensaje = saludar("Ana")<br>
+                                    print(mensaje)
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">4.2 Parámetros y Retorno</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    def suma(a, b):<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+                                    <br>
+                                    resultado = suma(5, 3)<br>
+                                    print(f"La suma es: {resultado}")
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 5: Listas y Tuplas -->
+                    <section id="listas" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">5. Listas y Tuplas</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">5.1 Listas</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    frutas = ["manzana", "banana", "naranja"]<br>
+                                    frutas.append("pera")<br>
+                                    print(frutas[0])  # Primera fruta<br>
+                                    print(len(frutas))  # Cantidad de frutas
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">5.2 Tuplas</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    coordenadas = (10, 20)<br>
+                                    x, y = coordenadas<br>
+                                    print(f"X: {x}, Y: {y}")
+                                </code>
+                            </div>
+
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-100 my-6">
+                                <h3 class="text-lg font-semibold mb-2">Proyecto Final</h3>
+                                <p>Crea un programa que gestione una lista de tareas usando los conceptos aprendidos.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>© 2024 NyxCode. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

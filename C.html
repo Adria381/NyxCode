@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de C+++ - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="NyxCode.html">
+                        <img src="/api/placeholder/40/40" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - C+++</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="NyxCode.html" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
+                        <a href="#ejercicios" class="text-gray-600 hover:text-gray-900">Ejercicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a C+++</a>
+                        </li>
+                        <li>
+                            <a href="#variables" class="text-gray-600 hover:text-gray-800">2. Variables y Tipos de Datos</a>
+                        </li>
+                        <li>
+                            <a href="#control" class="text-gray-600 hover:text-gray-800">3. Estructuras de Control</a>
+                        </li>
+                        <li>
+                            <a href="#funciones" class="text-gray-600 hover:text-gray-800">4. Funciones</a>
+                        </li>
+                        <li>
+                            <a href="#listas" class="text-gray-600 hover:text-gray-800">5. Arreglos y Vectores</a>
+                        </li>
+                        <li>
+                            <a href="#punteros" class="text-gray-600 hover:text-gray-800">6. Punteros</a>
+                        </li>
+                        <li>
+                            <a href="#oop" class="text-gray-600 hover:text-gray-800">7. Programación Orientada a Objetos (OOP)</a>
+                        </li>
+                        <li>
+                            <a href="#excepciones" class="text-gray-600 hover:text-gray-800">8. Manejo de Excepciones</a>
+                        </li>
+                        <li>
+                            <a href="#templates" class="text-gray-600 hover:text-gray-800">9. Plantillas (Templates)</a>
+                        </li>
+                        <li>
+                            <a href="#archivos" class="text-gray-600 hover:text-gray-800">10. Manejo de Archivos</a>
+                        </li>
+                        <li>
+                            <a href="#concurrencia" class="text-gray-600 hover:text-gray-800">11. Concurrencia y Hilos</a>
+                        </li>
+                        <li>
+                            <a href="#stl" class="text-gray-600 hover:text-gray-800">12. Librería Estándar (STL)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a C+++</h1>
+                        
+                        <div class="prose max-w-none">
+                            <p class="mb-4">C+++ es un lenguaje de programación basado en C que incorpora características avanzadas como clases, manejo de excepciones y más. Es utilizado tanto para aplicaciones de sistemas como de software de alto rendimiento.</p>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Tu Primer Programa en C+++</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    #include &lt;iostream&gt;<br>
+                                    using namespace std;<br><br>
+                                    int main() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "¡Hola, mundo!" &lt;&lt; endl;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                                    }
+                                </code>
+                            </div>
+                            <div class="output-block">
+                                Salida: ¡Hola, mundo!
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.2 El Compilador de C+++</h2>
+                            <p>C+++ es un lenguaje compilado, por lo que necesitas un compilador como GCC o Clang para ejecutar tus programas.</p>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Variables y Tipos de Datos -->
+                    <section id="variables" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Variables y Tipos de Datos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">2.1 Variables</h2>
+                            <p>Las variables en C+++ se usan para almacenar datos de diferentes tipos.</p>
+                            
+                            <div class="code-block">
+                                <code class="text-white">
+                                    string nombre = "Ana";<br>
+                                    int edad = 25;<br>
+                                    double altura = 1.65;<br>
+                                    bool es_estudiante = true;<br>
+                                    cout &lt;&lt; "Me llamo " &lt;&lt; nombre &lt;&lt; " y tengo " &lt;&lt; edad &lt;&lt; " años." &lt;&lt; endl;
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">2.2 Tipos de Datos Básicos</h2>
+                            <ul class="list-disc pl-6 mb-6">
+                                <li>int (números enteros)</li>
+                                <li>float (números decimales)</li>
+                                <li>double (números de doble precisión)</li>
+                                <li>char (caracteres)</li>
+                                <li>bool (valores booleanos)</li>
+                                <li>string (cadenas de texto)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Estructuras de Control -->
+                    <section id="control" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">3. Estructuras de Control</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">3.1 Condicionales if-else</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int edad = 18;<br>
+                                    if (edad >= 18) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Eres mayor de edad" &lt;&lt; endl;<br>
+                                    } else {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Eres menor de edad" &lt;&lt; endl;<br>
+                                    }
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">3.2 Bucles</h2>
+                            <p>Los bucles permiten ejecutar un bloque de código varias veces.</p>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    for (int i = 0; i &lt; 5; i++) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; i &lt;&lt; " ";<br>
+                                    }
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 4 y siguientes -->
+                    <section id="funciones" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">4. Funciones</h1>
+                        <div class="prose max-w-none">
+                            <p>Las funciones en C+++ son bloques de código reutilizables. Definimos una función y la llamamos cuando la necesitemos.</p>
+                            
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int suma(int a, int b) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+                                    }<br><br>
+                                    int main() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; suma(3, 4) &lt;&lt; endl;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                                    }
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 5: Arreglos y Vectores -->
+<section id="listas" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">5. Arreglos y Vectores</h1>
+
+    <div class="prose max-w-none">
+        <p>Los arreglos (o vectores) son estructuras que permiten almacenar múltiples valores del mismo tipo. En C+++, los arreglos tienen un tamaño fijo, y su acceso se hace mediante índices.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">5.1 Arreglos Unidimensionales</h2>
+        <div class="code-block">
+            <code class="text-white">
+                int edades[5] = {18, 25, 30, 22, 35};<br>
+                for (int i = 0; i &lt; 5; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; edades[i] &lt;&lt; " ";<br>
+                }
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">5.2 Arreglos Multidimensionales</h2>
+        <div class="code-block">
+            <code class="text-white">
+                int matriz[2][2] = {{1, 2}, {3, 4}};<br>
+                for (int i = 0; i &lt; 2; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; 2; j++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; matriz[i][j] &lt;&lt; " ";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 6: Punteros -->
+<section id="punteros" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">6. Punteros</h1>
+
+    <div class="prose max-w-none">
+        <p>Los punteros son variables que almacenan la dirección de memoria de otras variables. Son muy útiles para manipular datos en memoria directamente.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">6.1 Declaración y Uso de Punteros</h2>
+        <div class="code-block">
+            <code class="text-white">
+                int a = 5;<br>
+                int* ptr = &a;<br>
+                cout &lt;&lt; "Valor de a: " &lt;&lt; a &lt;&lt; endl;<br>
+                cout &lt;&lt; "Dirección de a: " &lt;&lt; &a &lt;&lt; endl;<br>
+                cout &lt;&lt; "Valor de ptr: " &lt;&lt; ptr &lt;&lt; endl;<br>
+                cout &lt;&lt; "Valor apuntado por ptr: " &lt;&lt; *ptr &lt;&lt; endl;
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">6.2 Punteros y Arreglos</h2>
+        <div class="code-block">
+            <code class="text-white">
+                int arreglo[3] = {10, 20, 30};<br>
+                int* ptr = arreglo;<br>
+                for (int i = 0; i &lt; 3; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; *(ptr + i) &lt;&lt; " ";<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 7: Programación Orientada a Objetos (OOP) -->
+<section id="oop" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">7. Programación Orientada a Objetos (OOP)</h1>
+
+    <div class="prose max-w-none">
+        <p>La programación orientada a objetos (OOP) permite organizar el código mediante clases y objetos. OOP facilita la reutilización y el mantenimiento del código.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">7.1 Clases y Objetos</h2>
+        <div class="code-block">
+            <code class="text-white">
+                class Persona {<br>
+                public:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;string nombre;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int edad;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Persona(string n, int e) { nombre = n; edad = e; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;void mostrar() { cout &lt;&lt; nombre &lt;&lt; " tiene " &lt;&lt; edad &lt;&lt; " años." &lt;&lt; endl; }<br>
+                };<br><br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Persona p("Juan", 30);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;p.mostrar();<br>
+                }
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">7.2 Herencia</h2>
+        <div class="code-block">
+            <code class="text-white">
+                class Estudiante : public Persona {<br>
+                public:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;string carrera;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Estudiante(string n, int e, string c) : Persona(n, e) { carrera = c; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;void mostrar() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; nombre &lt;&lt; " estudia " &lt;&lt; carrera &lt;&lt; endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                };<br><br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Estudiante e("Ana", 22, "Ingeniería");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;e.mostrar();<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 8: Manejo de Excepciones -->
+<section id="excepciones" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">8. Manejo de Excepciones</h1>
+
+    <div class="prose max-w-none">
+        <p>Las excepciones permiten manejar errores en tiempo de ejecución de manera más eficiente. En C+++, se usan bloques try-catch.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">8.1 Manejo Básico de Excepciones</h2>
+        <div class="code-block">
+            <code class="text-white">
+                try {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int a = 10;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int b = 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if (b == 0) throw "División por cero";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; a / b &lt;&lt; endl;<br>
+                } catch (const char* msg) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Error: " &lt;&lt; msg &lt;&lt; endl;<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 9: Plantillas (Templates) -->
+<section id="templates" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">9. Plantillas (Templates)</h1>
+
+    <div class="prose max-w-none">
+        <p>Las plantillas en C+++ permiten crear funciones y clases que operan con diferentes tipos de datos.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">9.1 Funciones Template</h2>
+        <div class="code-block">
+            <code class="text-white">
+                template &lt;typename T&gt;<br>
+                T suma(T a, T b) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+                }<br><br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; suma(5, 3) &lt;&lt; endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; suma(2.5, 3.5) &lt;&lt; endl;<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 10: Archivos -->
+<section id="archivos" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">10. Archivos</h1>
+
+    <div class="prose max-w-none">
+        <p>El manejo de archivos en C+++ permite leer y escribir datos desde o hacia archivos en disco. Usamos las librerías <code>fstream</code> para leer y escribir archivos.</p>
+
+        <h2 class="text-2xl font-semibold mb-4">10.1 Lectura de Archivos</h2>
+        <div class="code-block">
+            <code class="text-white">
+                #include &lt;fstream&gt;<br>
+                #include &lt;iostream&gt;<br><br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;fstream archivo("datos.txt", ios::in);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if (archivo.is_open()) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string linea;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (getline(archivo, linea)) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; linea &lt;&lt; endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;archivo.close();<br>
+                }<br>
+                }
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">10.2 Escritura en Archivos</h2>
+        <div class="code-block">
+            <code class="text-white">
+                #include &lt;fstream&gt;<br>
+                #include &lt;iostream&gt;<br><br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;fstream archivo("output.txt", ios::out);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if (archivo.is_open()) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivo &lt;&lt; "Hola, mundo!" &lt;&lt; endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivo.close();<br>
+                }<br>
+                }
+            </code>
+        </div>
+    </div>
+</section>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

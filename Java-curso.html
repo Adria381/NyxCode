@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Java - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="NyxCode.html">
+                        <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - Java</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="NyxCode.html" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
+                        <a href="#ejercicios" class="text-gray-600 hover:text-gray-900">Ejercicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a Java</a></li>
+                        <li><a href="#variables" class="text-gray-600 hover:text-gray-800">2. Variables y Tipos de Datos</a></li>
+                        <li><a href="#control" class="text-gray-600 hover:text-gray-800">3. Estructuras de Control</a></li>
+                        <li><a href="#metodos" class="text-gray-600 hover:text-gray-800">4. Métodos</a></li>
+                        <li><a href="#arrays" class="text-gray-600 hover:text-gray-800">5. Arreglos</a></li>
+                        <!-- Aquí agregar los 10 módulos adicionales -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a Java</h1>
+                        <div class="prose max-w-none">
+                            <p class="mb-4">Java es un lenguaje de programación orientado a objetos, ampliamente utilizado en desarrollo de aplicaciones web y de escritorio.</p>
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Tu Primer Programa</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    public class Main {<br>
+                                    &nbsp;&nbsp;public static void main(String[] args) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("¡Hola, mundo!");<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }
+                                </code>
+                            </div>
+                            <div class="output-block">
+                                Salida: ¡Hola, mundo!
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Variables y Tipos de Datos -->
+                    <section id="variables" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Variables y Tipos de Datos</h1>
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">2.1 Variables</h2>
+                            <p>En Java, las variables almacenan información de distintos tipos.</p>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    String nombre = "Ana";<br>
+                                    int edad = 25;<br>
+                                    double altura = 1.65;<br>
+                                    boolean esEstudiante = true;<br>
+                                    <br>
+                                    System.out.println("Me llamo " + nombre + " y tengo " + edad + " años");
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Estructuras de Control -->
+<section id="control" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">3. Estructuras de Control</h1>
+    
+    <div class="prose max-w-none">
+        <h2 class="text-2xl font-semibold mb-4">3.1 Condicionales if-else</h2>
+        <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código dependiendo de si una condición se cumple o no. El ejemplo más común es el condicional if-else.</p>
+        
+        <div class="code-block">
+            <code class="text-white">
+                edad = 18<br>
+                if edad >= 18:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Eres mayor de edad")<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Eres menor de edad")
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">3.2 Bucles</h2>
+        <h3 class="text-xl font-semibold mt-4 mb-2">Bucle for</h3>
+        <p>El bucle for se usa para repetir una acción un número determinado de veces. Es muy útil cuando se sabe cuántas iteraciones se deben hacer.</p>
+        <div class="code-block">
+            <code class="text-white">
+                for i in range(5):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f"Número: {i}")
+            </code>
+        </div>
+
+        <h3 class="text-xl font-semibold mt-4 mb-2">Bucle while</h3>
+        <p>El bucle while se ejecuta mientras se cumpla una condición. Es útil cuando no se sabe cuántas iteraciones se necesitarán de antemano.</p>
+        <div class="code-block">
+            <code class="text-white">
+                contador = 0<br>
+                while contador < 5:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f"Contador: {contador}")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;contador += 1
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 4: Funciones -->
+<section id="funciones" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">4. Funciones</h1>
+    
+    <div class="prose max-w-none">
+        <h2 class="text-2xl font-semibold mb-4">4.1 Definición de Funciones</h2>
+        <p>Las funciones son bloques de código reutilizables que se pueden llamar para realizar una tarea específica. Esto mejora la modularidad del código y evita la repetición.</p>
+        
+        <div class="code-block">
+            <code class="text-white">
+                def saludar(nombre):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return f"¡Hola, {nombre}!"<br>
+                <br>
+                mensaje = saludar("Ana")<br>
+                print(mensaje)
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">4.2 Parámetros y Retorno</h2>
+        <p>Las funciones pueden recibir parámetros (valores de entrada) y devolver resultados. Esto permite crear funciones más dinámicas y útiles.</p>
+        <div class="code-block">
+            <code class="text-white">
+                def suma(a, b):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+                <br>
+                resultado = suma(5, 3)<br>
+                print(f"La suma es: {resultado}")
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 5: Listas y Tuplas -->
+<section id="listas" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">5. Listas y Tuplas</h1>
+    
+    <div class="prose max-w-none">
+        <h2 class="text-2xl font-semibold mb-4">5.1 Listas</h2>
+        <p>Las listas son estructuras que permiten almacenar múltiples elementos. Son dinámicas, lo que significa que se pueden modificar, agregar o eliminar elementos en cualquier momento.</p>
+        
+        <div class="code-block">
+            <code class="text-white">
+                frutas = ["manzana", "banana", "naranja"]<br>
+                frutas.append("pera")<br>
+                print(frutas[0])  # Primera fruta<br>
+                print(len(frutas))  # Cantidad de frutas
+            </code>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">5.2 Tuplas</h2>
+        <p>Las tuplas son similares a las listas, pero a diferencia de ellas, las tuplas son inmutables. Esto significa que no pueden modificarse una vez creadas.</p>
+        <div class="code-block">
+            <code class="text-white">
+                coordenadas = (10, 20)<br>
+                x, y = coordenadas<br>
+                print(f"X: {x}, Y: {y}")
+            </code>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded-lg border border-green-100 my-6">
+            <h3 class="text-lg font-semibold mb-2">Proyecto Final</h3>
+            <p>Crea un programa que gestione una lista de tareas usando los conceptos aprendidos.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 6: Diccionarios -->
+<section id="diccionarios" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">6. Diccionarios</h1>
+    
+    <div class="prose max-w-none">
+        <p>Los diccionarios permiten almacenar pares clave-valor. Son muy útiles cuando necesitas asociar un dato con otro, como un nombre con un número de teléfono.</p>
+
+        <div class="code-block">
+            <code class="text-white">
+                persona = {"nombre": "Juan", "edad": 30, "ciudad": "Madrid"}<br>
+                print(persona["nombre"])  # Imprime 'Juan'
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 7: Manejo de Excepciones -->
+<section id="excepciones" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">7. Manejo de Excepciones</h1>
+    
+    <div class="prose max-w-none">
+        <p>El manejo de excepciones se utiliza para capturar errores en el código y gestionarlos adecuadamente sin que el programa se detenga abruptamente.</p>
+
+        <div class="code-block">
+            <code class="text-white">
+                try:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero = int(input("Introduce un número: "))<br>
+                except ValueError:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("¡Error! No es un número válido.")
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 8: Clases y Objetos -->
+<section id="clases" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">8. Clases y Objetos</h1>
+    
+    <div class="prose max-w-none">
+        <p>La programación orientada a objetos (OOP) permite crear clases que sirven como plantillas para crear objetos. Un objeto es una instancia de una clase.</p>
+
+        <div class="code-block">
+            <code class="text-white">
+                class Persona:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, nombre, edad):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.nombre = nombre<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.edad = edad<br>
+
+                persona1 = Persona("Ana", 25)<br>
+                print(persona1.nombre)  # Imprime 'Ana'
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 9: Archivos -->
+<section id="archivos" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">9. Manejo de Archivos</h1>
+    
+    <div class="prose max-w-none">
+        <p>Python permite trabajar con archivos de texto para leer y escribir datos de manera persistente. Es muy útil para guardar configuraciones o información generada por el programa.</p>
+
+        <div class="code-block">
+            <code class="text-white">
+                with open("archivo.txt", "w") as f:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;f.write("Hola Mundo")<br>
+                
+                with open("archivo.txt", "r") as f:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;contenido = f.read()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(contenido)
+            </code>
+        </div>
+    </div>
+</section>
+
+<!-- Módulo 10: Librerías Externas -->
+<section id="librerias" class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6">10. Uso de Librerías Externas</h1>
+    
+    <div class="prose max-w-none">
+        <p>Las librerías externas proporcionan funcionalidades adicionales. Puedes instalarlas con <code>pip</code> y usarlas para añadir características como la manipulación de fechas, conexión a bases de datos, entre otros.</p>
+
+        <div class="code-block">
+            <code class="text-white">
+                import requests<br>
+                response = requests.get("https://api.example.com")<br>
+                print(response.json())
+            </code>
+        </div>
+    </div>
+</section>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>© 2024 NyxCode. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

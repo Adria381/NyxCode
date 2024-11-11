@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML y CSS - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .output-block {
+            background-color: #f0f4f8;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - HTML y CSS</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a HTML</a></li>
+                        <li><a href="#estructura" class="text-gray-600 hover:text-gray-800">2. Estructura Básica</a></li>
+                        <li><a href="#estilos" class="text-gray-600 hover:text-gray-800">3. Introducción a CSS</a></li>
+                        <li><a href="#selectores" class="text-gray-600 hover:text-gray-800">4. Selectores CSS</a></li>
+                        <li><a href="#layout" class="text-gray-600 hover:text-gray-800">5. Layout y Posicionamiento</a></li>
+                        <li><a href="#multimedia" class="text-gray-600 hover:text-gray-800">6. Multimedia y Estilos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción a HTML -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a HTML</h1>
+                        <p>HTML es el lenguaje base para crear contenido en la web. Se usa para estructurar y organizar el contenido en las páginas.</p>
+
+                        <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Ejemplo Básico</h2>
+                        <div class="code-block">
+                            <code>
+                                &lt;!DOCTYPE html&gt;<br>
+                                &lt;html&gt;<br>
+                                &nbsp;&nbsp;&lt;head&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Mi Primera Página&lt;/title&gt;<br>
+                                &nbsp;&nbsp;&lt;/head&gt;<br>
+                                &nbsp;&nbsp;&lt;body&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;<br>
+                                &nbsp;&nbsp;&lt;/body&gt;<br>
+                                &lt;/html&gt;
+                            </code>
+                        </div>
+                        <div class="output-block">
+                            <h1>¡Hola Mundo!</h1>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Estructura Básica -->
+                    <section id="estructura" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Estructura Básica</h1>
+                        <p>En este módulo aprenderás cómo organizar los elementos dentro de tu página HTML.</p>
+
+                        <h2 class="text-2xl font-semibold mb-4">2.1 Encabezados, Párrafos y Enlaces</h2>
+                        <div class="code-block">
+                            <code>
+                                &lt;h1&gt;Encabezado 1&lt;/h1&gt;<br>
+                                &lt;p&gt;Este es un párrafo.&lt;/p&gt;<br>
+                                &lt;a href="https://NyxCode.com"&gt;Visita NyxCode&lt;/a&gt;
+                            </code>
+                        </div>
+                        <div class="output-block">
+                            <h1>Encabezado 1</h1>
+                            <p>Este es un párrafo.</p>
+                            <a href="https://NyxCode.com">Visita NyxCode</a>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Introducción a CSS -->
+                    <section id="estilos" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">3. Introducción a CSS</h1>
+                        <p>CSS es el lenguaje usado para dar estilo y diseño a tu contenido HTML.</p>
+
+                        <h2 class="text-2xl font-semibold mb-4">3.1 Cambiando Colores y Fuentes</h2>
+                        <div class="code-block">
+                            <code>
+                                &lt;style&gt;<br>
+                                &nbsp;&nbsp;body {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: #f0f4f8;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+                                &nbsp;&nbsp;}<br>
+                                &lt;/style&gt;
+                            </code>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 4: Selectores CSS -->
+                    <section id="selectores" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">4. Selectores CSS</h1>
+                        <p>Los selectores en CSS permiten aplicar estilos a elementos específicos en la página.</p>
+
+                        <h2 class="text-2xl font-semibold mb-4">4.1 Selectores de Clase y ID</h2>
+                        <div class="code-block">
+                            <code>
+                                &lt;style&gt;<br>
+                                &nbsp;&nbsp;.miClase { color: blue; }<br>
+                                &nbsp;&nbsp;#miID { font-weight: bold; }<br>
+                                &lt;/style&gt;<br><br>
+                                &lt;p class="miClase"&gt;Texto azul&lt;/p&gt;<br>
+                                &lt;p id="miID"&gt;Texto en negrita&lt;/p&gt;
+                            </code>
+                        </div>
+                    </section>
+                    <!-- Módulo 5: Layout y Posicionamiento -->
+                    <section id="layout" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">5. Layout y Posicionamiento</h1>
+                        <p>Aprenderás a crear diseños de página usando CSS Flexbox y Grid para organizar los elementos de manera flexible y eficiente.</p>
+
+                        <!-- Ejemplo Flexbox -->
+                        <h2 class="text-2xl font-semibold mb-4">5.1 Ejemplo de Flexbox</h2>
+                        <p>Con Flexbox, los elementos se distribuyen automáticamente dentro de un contenedor flexible. Esto es útil para crear alineaciones horizontales o verticales.</p>
+                        <div class="code-block">
+                            <code>
+                                &lt;style&gt;<br>
+                                &nbsp;&nbsp;.flex-container {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;gap: 10px;<br>
+                                &nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;.flex-item {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: #4A90E2;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                                &nbsp;&nbsp;}<br>
+                                &lt;/style&gt;<br><br>
+                                &lt;div class="flex-container"&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="flex-item"&gt;Elemento 1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="flex-item"&gt;Elemento 2&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="flex-item"&gt;Elemento 3&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                        <div class="output-block">
+                            <div class="flex-container" style="display: flex; gap: 10px;">
+                                <div class="flex-item" style="padding: 20px; background-color: #4A90E2; color: #fff; text-align: center;">Elemento 1</div>
+                                <div class="flex-item" style="padding: 20px; background-color: #4A90E2; color: #fff; text-align: center;">Elemento 2</div>
+                                <div class="flex-item" style="padding: 20px; background-color: #4A90E2; color: #fff; text-align: center;">Elemento 3</div>
+                            </div>
+                        </div>
+
+                        <!-- Ejemplo Grid -->
+                        <h2 class="text-2xl font-semibold mt-8 mb-4">5.2 Ejemplo de CSS Grid</h2>
+                        <p>CSS Grid permite organizar los elementos en filas y columnas, ideal para crear diseños de cuadrícula complejos.</p>
+                        <div class="code-block">
+                            <code>
+                                &lt;style&gt;<br>
+                                &nbsp;&nbsp;.grid-container {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;gap: 10px;<br>
+                                &nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;.grid-item {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: #D64541;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                                &nbsp;&nbsp;}<br>
+                                &lt;/style&gt;<br><br>
+                                &lt;div class="grid-container"&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento A&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento B&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento C&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento D&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento E&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="grid-item"&gt;Elemento F&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                        <div class="output-block">
+                            <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento A</div>
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento B</div>
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento C</div>
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento D</div>
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento E</div>
+                                <div class="grid-item" style="padding: 20px; background-color: #D64541; color: #fff; text-align: center;">Elemento F</div>
+                            </div>
+                        </div>
+                    </section>
+                    

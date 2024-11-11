@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de C# - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="NyxCode.html">
+                        <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - C#</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="NyxCode.html" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
+                        <a href="#ejercicios" class="text-gray-600 hover:text-gray-900">Ejercicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a C#</a>
+                        </li>
+                        <li>
+                            <a href="#variables" class="text-gray-600 hover:text-gray-800">2. Variables y Tipos de Datos</a>
+                        </li>
+                        <li>
+                            <a href="#control" class="text-gray-600 hover:text-gray-800">3. Estructuras de Control</a>
+                        </li>
+                        <li>
+                            <a href="#funciones" class="text-gray-600 hover:text-gray-800">4. Funciones</a>
+                        </li>
+                        <li>
+                            <a href="#listas" class="text-gray-600 hover:text-gray-800">5. Listas y Arrays</a>
+                        </li>
+                        <li>
+                            <a href="#clases" class="text-gray-600 hover:text-gray-800">6. Clases y Objetos</a>
+                        </li>
+                        <li>
+                            <a href="#herencia" class="text-gray-600 hover:text-gray-800">7. Herencia</a>
+                        </li>
+                        <li>
+                            <a href="#interfaces" class="text-gray-600 hover:text-gray-800">8. Interfaces</a>
+                        </li>
+                        <li>
+                            <a href="#excepciones" class="text-gray-600 hover:text-gray-800">9. Manejo de Excepciones</a>
+                        </li>
+                        <li>
+                            <a href="#asynchronous" class="text-gray-600 hover:text-gray-800">10. Programación Asíncrona</a>
+                        </li>
+                        <li>
+                            <a href="#linq" class="text-gray-600 hover:text-gray-800">11. LINQ</a>
+                        </li>
+                        <li>
+                            <a href="#delegados" class="text-gray-600 hover:text-gray-800">12. Delegados y Eventos</a>
+                        </li>
+                        <li>
+                            <a href="#collections" class="text-gray-600 hover:text-gray-800">13. Colecciones en C#</a>
+                        </li>
+                        <li>
+                            <a href="#lambda" class="text-gray-600 hover:text-gray-800">14. Expresiones Lambda</a>
+                        </li>
+                        <li>
+                            <a href="#reflection" class="text-gray-600 hover:text-gray-800">15. Reflection en C#</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a C#</h1>
+                        
+                        <div class="prose max-w-none">
+                            <p class="mb-4">C# es un lenguaje de programación desarrollado por Microsoft. Es muy popular para aplicaciones de escritorio, videojuegos (con Unity) y servicios web.</p>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Tu Primer Programa</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    using System;<br>
+                                    <br>
+                                    class Program<br>
+                                    {<br>
+                                    &nbsp;&nbsp;static void Main()<br>
+                                    &nbsp;&nbsp;{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("¡Hola, mundo!");<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }
+                                </code>
+                            </div>
+                            <div class="output-block">
+                                Salida: ¡Hola, mundo!
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Variables y Tipos de Datos -->
+                    <section id="variables" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Variables y Tipos de Datos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">2.1 Variables</h2>
+                            <p>Las variables en C# se utilizan para almacenar datos.</p>
+                            
+                            <div class="code-block">
+                                <code class="text-white">
+                                    string nombre = "Ana";<br>
+                                    int edad = 25;<br>
+                                    double altura = 1.65;<br>
+                                    bool esEstudiante = true;<br>
+                                    <br>
+                                    Console.WriteLine($"Me llamo {nombre} y tengo {edad} años");
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">2.2 Tipos de Datos Básicos</h2>
+                            <ul class="list-disc pl-6 mb-6">
+                                <li>string (cadenas de texto)</li>
+                                <li>int (números enteros)</li>
+                                <li>double (números decimales)</li>
+                                <li>bool (valores booleanos)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Estructuras de Control -->
+                    <section id="control" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">3. Estructuras de Control</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">3.1 Condicionales if-else</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int edad = 18;<br>
+                                    if (edad >= 18)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Eres mayor de edad");<br>
+                                    else<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Eres menor de edad");
+                                </code>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">3.2 Bucles</h2>
+                            <h3 class="text-xl font-semibold mt-4 mb-2">Bucle for</h3>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    for (int i = 0; i < 5; i++)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(i);
+                                </code>
+                            </div>
+                            <h3 class="text-xl font-semibold mt-4 mb-2">Bucle while</h3>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int i = 0;<br>
+                                    while (i < 5)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(i);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 4: Funciones -->
+                    <section id="funciones" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">4. Funciones</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">4.1 Definición de una Función</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    static int Sumar(int a, int b)<br>
+                                    {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+                                    }<br>
+                                    <br>
+                                    Console.WriteLine(Sumar(3, 4)); // 7
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 5: Listas y Arrays -->
+                    <section id="listas" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">5. Listas y Arrays</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">5.1 Arrays</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int[] numeros = {1, 2, 3, 4, 5};<br>
+                                    Console.WriteLine(numeros[0]); // 1
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 6: Clases y Objetos -->
+                    <section id="clases" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">6. Clases y Objetos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">6.1 Definición de una Clase</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    class Persona<br>
+                                    {<br>
+                                    &nbsp;&nbsp;public string Nombre;<br>
+                                    &nbsp;&nbsp;public int Edad;<br>
+                                    }<br>
+                                    <br>
+                                    Persona persona = new Persona();<br>
+                                    persona.Nombre = "Ana";<br>
+                                    persona.Edad = 25;<br>
+                                    Console.WriteLine(persona.Nombre); // Ana
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 7: Herencia -->
+                    <section id="herencia" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">7. Herencia</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">7.1 Clases Derivadas</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    class Animal<br>
+                                    {<br>
+                                    &nbsp;&nbsp;public void Hablar()<br>
+                                    &nbsp;&nbsp;{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Sonido de Animal");<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }<br>
+                                    <br>
+                                    class Perro : Animal<br>
+                                    {<br>
+                                    &nbsp;&nbsp;public void Hablar()<br>
+                                    &nbsp;&nbsp;{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Guau!");<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }<br>
+                                    <br>
+                                    Perro perro = new Perro();<br>
+                                    perro.Hablar(); // Guau!
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 8: Interfaces -->
+                    <section id="interfaces" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">8. Interfaces</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">8.1 Definición y Uso de Interfaces</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    interface IAnimal<br>
+                                    {<br>
+                                    &nbsp;&nbsp;void Hablar();<br>
+                                    }<br>
+                                    <br>
+                                    class Gato : IAnimal<br>
+                                    {<br>
+                                    &nbsp;&nbsp;public void Hablar()<br>
+                                    &nbsp;&nbsp;{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Miau!");<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }<br>
+                                    <br>
+                                    IAnimal gato = new Gato();<br>
+                                    gato.Hablar(); // Miau!
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 9: Manejo de Excepciones -->
+                    <section id="excepciones" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">9. Manejo de Excepciones</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">9.1 Try-Catch</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    try<br>
+                                    {<br>
+                                    &nbsp;&nbsp;int resultado = 10 / 0;<br>
+                                    }<br>
+                                    catch (DivideByZeroException e)<br>
+                                    {<br>
+                                    &nbsp;&nbsp;Console.WriteLine($"Error: {e.Message}");<br>
+                                    }<br>
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 10: Programación Asíncrona -->
+                    <section id="asynchronous" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">10. Programación Asíncrona</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">10.1 Async y Await</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    async Task DescargarArchivo()<br>
+                                    {<br>
+                                    &nbsp;&nbsp;await Task.Delay(3000);<br>
+                                    &nbsp;&nbsp;Console.WriteLine("Archivo descargado");<br>
+                                    }<br>
+                                    <br>
+                                    await DescargarArchivo();<br>
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 11: LINQ -->
+                    <section id="linq" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">11. LINQ</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">11.1 Consultas LINQ</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    int[] numeros = {1, 2, 3, 4, 5};<br>
+                                    var resultado = from n in numeros<br>
+                                    &nbsp;&nbsp;where n > 2<br>
+                                    &nbsp;&nbsp;select n;<br>
+                                    <br>
+                                    foreach (var num in resultado)<br>
+                                    &nbsp;&nbsp;Console.WriteLine(num);
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 12: Delegados y Eventos -->
+                    <section id="delegados" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">12. Delegados y Eventos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">12.1 Definición de Delegados</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    delegate void MiDelegado(string mensaje);<br>
+                                    <br>
+                                    MiDelegado delegado = (mensaje) => Console.WriteLine(mensaje);<br>
+                                    delegado("Hola, Delegado!");
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 13: Programación Funcional -->
+                    <section id="programacion-funcional" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">13. Programación Funcional</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">13.1 Funciones de Orden Superior</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    Func&lt;int, int, int&gt; suma = (a, b) => a + b;<br>
+                                    Console.WriteLine(suma(3, 4)); // 7
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 14: Seguridad y Autenticación -->
+                    <section id="seguridad" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">14. Seguridad y Autenticación</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">14.1 Autenticación Básica</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    var autenticacion = new PasswordAuthentication();<br>
+                                    autenticacion.Verificar("usuario", "contraseña");
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </body>
+    </html>
+</pre>
+<blockquote> <code>This page is not finished yet </code>  </blockquote>

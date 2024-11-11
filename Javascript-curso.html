@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - NyxCode</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    </a>
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode - JavaScript</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
+                        <a href="#ejercicios" class="text-gray-600 hover:text-gray-900">Ejercicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Curso -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar - Módulos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-20">
+                    <h3 class="text-lg font-semibold mb-4">Módulos del Curso</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#intro" class="text-indigo-600 hover:text-indigo-800">1. Introducción a JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="#variables" class="text-gray-600 hover:text-gray-800">2. Variables y Tipos de Datos</a>
+                        </li>
+                        <li>
+                            <a href="#control" class="text-gray-600 hover:text-gray-800">3. Estructuras de Control</a>
+                        </li>
+                        <li>
+                            <a href="#funciones" class="text-gray-600 hover:text-gray-800">4. Funciones</a>
+                        </li>
+                        <li>
+                            <a href="#listas" class="text-gray-600 hover:text-gray-800">5. Arreglos y Objetos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="lg:col-span-3">
+                <div class="space-y-12">
+                    <!-- Módulo 1: Introducción -->
+                    <section id="intro" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">1. Introducción a JavaScript</h1>
+                        
+                        <div class="prose max-w-none">
+                            <p class="mb-4">JavaScript es un lenguaje de programación esencial en el desarrollo web. Permite crear interactividad y manejar datos en tiempo real en aplicaciones web.</p>
+
+                            <h2 class="text-2xl font-semibold mt-8 mb-4">1.1 Tu Primer Programa</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    console.log("¡Hola, mundo!");
+                                </code>
+                            </div>
+                            <div class="output-block">
+                                Salida: ¡Hola, mundo!
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 2: Variables y Tipos de Datos -->
+                    <section id="variables" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">2. Variables y Tipos de Datos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">2.1 Variables</h2>
+                            <p>Las variables en JavaScript se pueden declarar con <code>var</code>, <code>let</code>, o <code>const</code>.</p>
+                            
+                            <div class="code-block">
+                                <code class="text-white">
+                                    let nombre = "Ana";<br>
+                                    const edad = 25;<br>
+                                    let altura = 1.65;<br>
+                                    let esEstudiante = true;<br>
+                                    <br>
+                                    console.log(`Me llamo ${nombre} y tengo ${edad} años`);
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 3: Estructuras de Control -->
+                    <section id="control" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">3. Estructuras de Control</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">3.1 Condicionales if-else</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    let edad = 18;<br>
+                                    if (edad >= 18) {<br>
+                                    &nbsp;&nbsp;console.log("Eres mayor de edad");<br>
+                                    } else {<br>
+                                    &nbsp;&nbsp;console.log("Eres menor de edad");<br>
+                                    }
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 4: Funciones -->
+                    <section id="funciones" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">4. Funciones</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">4.1 Definición de Funciones</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    function saludar(nombre) {<br>
+                                    &nbsp;&nbsp;return `¡Hola, ${nombre}!`;<br>
+                                    }<br>
+                                    <br>
+                                    const mensaje = saludar("Ana");<br>
+                                    console.log(mensaje);
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Módulo 5: Arreglos y Objetos -->
+                    <section id="listas" class="bg-white rounded-lg shadow-lg p-6">
+                        <h1 class="text-3xl font-bold mb-6">5. Arreglos y Objetos</h1>
+                        
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-semibold mb-4">5.1 Arreglos</h2>
+                            <div class="code-block">
+                                <code class="text-white">
+                                    let frutas = ["manzana", "banana", "naranja"];<br>
+                                    frutas.push("pera");<br>
+                                    console.log(frutas[0]);  // Primera fruta<br>
+                                    console.log(frutas.length);  // Cantidad de frutas
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>© 2024 NyxCode. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

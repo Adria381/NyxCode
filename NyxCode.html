@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyxCode - Aprende Programación</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #FFD1DC;
+            --color-secondary: #E6F3FF;
+            --color-accent: #B5EAD7;
+        }
+        .hero-pattern {
+            background-color: var(--color-secondary);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.344 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83z' fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .course-card {
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="NyxCode.png" alt="NyxCode Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-2 text-xl font-bold text-gray-800">NyxCode</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Inicio</a>
+                        <a href="#cursos" class="text-gray-600 hover:text-gray-900">Cursos</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Precios</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    Aprende programación de manera <span class="text-indigo-600">divertida</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Descubre el mundo de la programación con nuestros cursos diseñados para principiantes y expertos.
+                </p>
+                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div class="rounded-md shadow">
+                        <a href="#cursos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                            Comenzar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursos -->
+    <div id="cursos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-extrabold text-center mb-12">Nuestros Cursos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Python Card -->
+            <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9l-2.829 2.829"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Python para Principiantes</h3>
+                    <p class="text-gray-600 mb-4">Aprende los fundamentos de Python, el lenguaje más versátil y amigable para comenzar.</p>
+                    <a href="python-curso.html" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors">
+                        Comenzar Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- HTML/CSS Card -->
+            <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-pink-500 text-white mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTML y CSS</h3>
+                    <p class="text-gray-600 mb-4">Domina los fundamentos del desarrollo web y crea sitios hermosos.</p>
+                    <a href="html-curso.html" class="inline-block bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition-colors">
+                        Comenzar Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- JavaScript Card -->
+            <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-600 mb-4">Da vida a tus páginas web con el poder de JavaScript.</p>
+                    <a href="javascript-curso.html" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors">
+                        Comenzar Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- Java Card -->
+            <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Java</h3>
+                    <p class="text-gray-600 mb-4">Aprende uno de los lenguajes más demandados en el mundo empresarial.</p>
+                    <a href="java-curso.html" class="inline-block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition-colors">
+                        Comenzar Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- C++ Card -->
+            <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">C++</h3>
+                    <p class="text-gray-600 mb-4">No disponible</p>
+                    <a href="C.html" class="inline-block bg-blue-500
+                    text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-colors">
+                        Comenzar Curso
+                    </a>
+                   </div>
+                  </div>
+                  <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="p-6">
+        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white mb-4">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">C#</h3>
+        <p class="text-gray-600 mb-4">Aprende los fundamentos de la programación
+        con C#, un lenguaje potente utilizado en desarrollo de aplicaciones y
+        videojuegos.</p>
+        <a href="Csharp.html" class="inline-block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition-colors">
+            Comenzar Curso
+        </a>
+    </div>
+</div>
