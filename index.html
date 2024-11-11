@@ -3,73 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3;url=NyxCode.html">
-    <title>Redirigiendo...</title>
+    <meta http-equiv="refresh" content="15;url=NyxCode.html">
+    <title>Redirigiendo a NyxCode...</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #2e2e2e;
-            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #ffffff, #e1bee7, #white);
+            margin: 0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            flex-direction: column;
+            perspective: 1000px;
         }
 
-        h1 {
-            font-size: 2rem;
-            letter-spacing: 3px;
-            color: #ff5733;
+        .course-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 
+                0 10px 30px rgba(147, 112, 219, 0.2),
+                0 1px 3px rgba(147, 112, 219, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.7);
+            width: 90%;
+            max-width: 400px;
+            padding: 2.5rem;
+            text-align: center;
+            transform-style: preserve-3d;
+            animation: floatCard 6s ease-in-out infinite;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+
+        .icon {
+            background: linear-gradient(135deg, #b39ddb, #9575cd);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 8px 16px rgba(147, 112, 219, 0.2),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: white;
+        }
+
+        h3 {
+            color: #5e35b1;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: #7e57c2;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         .progress-container {
-            width: 80%;
-            background-color: #555;
-            height: 30px;
-            border: 2px solid #fff;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            background: #ede7f6;
+            border-radius: 20px;
+            height: 12px;
+            margin: 2rem 0;
+            overflow: hidden;
             position: relative;
         }
 
         .progress-bar {
-            background-color: #ff5733;
+            background: linear-gradient(90deg, #b39ddb, #9575cd);
             height: 100%;
             width: 0;
-            text-align: center;
-            line-height: 30px;
-            font-size: 1rem;
-            color: #fff;
-            font-weight: bold;
-            animation: fillProgress 3s forwards;
+            border-radius: 20px;
+            animation: fillProgress 15s linear forwards;
+            box-shadow: 0 2px 4px rgba(147, 112, 219, 0.2);
+        }
+
+        .progress-glow {
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            animation: glowingEffect 2s linear infinite;
         }
 
         @keyframes fillProgress {
-            0% {
-                width: 0%;
-            }
-            100% {
-                width: 100%;
-            }
+            0% { width: 0%; }
+            100% { width: 100%; }
         }
 
-        .footer {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
+        @keyframes glowingEffect {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(400%); }
+        }
+
+        .modern-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #9575cd, #7e57c2);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 600;
             font-size: 1rem;
-            color: #ccc;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 4px 12px rgba(147, 112, 219, 0.3),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+
+        .modern-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 6px 16px rgba(147, 112, 219, 0.4),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .modern-button:active {
+            transform: translateY(0);
+            box-shadow: 
+                0 2px 8px rgba(147, 112, 219, 0.2),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading-dots {
+            display: inline-block;
+        }
+
+        .loading-dots::after {
+            content: '';
+            animation: dots 2s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
         }
     </style>
 </head>
 <body>
-    <h1>Redirigiendo a NyxCode...</h1>
-    <div class="progress-container">
-        <div class="progress-bar">Cargando...</div>
+    <div class="course-card">
+        <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+        </div>
+        <h3>NyxCode</h3>
+        <p class="loading-dots">Preparando tu experiencia</p>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-glow"></div>
+        </div>
+        <a href="NyxCode.html" class="modern-button">Continuar ahora</a>
     </div>
-    <div class="footer">Si no eres redirigido, <a href="NyxCode.html" style="color: #ff5733;">haz clic aquí</a></div>
 </body>
 </html>
